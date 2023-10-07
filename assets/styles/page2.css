@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'kanit', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+nav ul {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(90deg, #00ccff, #00ccff, #ff0000, #ff0000, #d400d4, #d400d4, #00ccff);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textrgb;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+nav ul li a::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.content {
+    min-height: 100vh;
+    background: #20232f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textrgb {
+    background: linear-gradient(90deg, #00ccff, #d400d4, #ff0000, #d400d4, #00ccff, #00ccff);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textrgb;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textrgb {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: -400%;
+    }
+}
+
+.box form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box form textarea {
+    font-size: 18px;
+    padding: 10px; 
+    border: #d400d4 2px solid;
+}
+
+.box form textarea:focus { 
+    border: #00ccff 2px solid;
+    outline: none;
+}
+
+.box form input[type="submit"] {
+    margin-top: 15px;
+    outline: none;
+    color: #d400d4;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #00ccff;
+    padding: 10px 30px;
+    transition: 0.2s;
+    background: #2b2b2b;
+}
+
+.box form input[type="submit"]:hover {
+    background: #00ccff;
+}

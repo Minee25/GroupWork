@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'kanit', sans-serif; 
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+nav {
+    position: absolute;
+    position: fixed; 
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+nav ul {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+ 
+nav ul li a::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+@keyframes textrgb {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: -400%;
+    }
+}
+.content {
+    min-height: 100%;
+    width: 100%;
+    background: #20232f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    margin-top: 70px;
+    min-height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    width: 100%;
+    border-radius: 5px;
+    background: #1a2341;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    padding: 30px;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.textrgb {
+    color: #fff;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff0000, #d400d4, #00ccff, #00ccff, #d400d4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textrgb;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+nav ul li a:hover { 
+    background: linear-gradient(90deg, #00ccff, #00ccff, #ff0000, #ff0000, #d400d4, #d400d4, #00ccff);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textrgb;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textrgb {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: -400%;
+    }
+}
+
+.rgb {
+    position: relative;
+    background: #3666a0;
+    padding: 3px;
+    border-radius: 5px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rgb-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.rgb1 {
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(90deg, #FF0000, #ff0000, #E6FF00, #00FF00, #00ccff, #00ccff,#d400d4, #FF0000);
+    animation: rgb1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rgb2 {
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(90deg, #FF0000, #ff0000, #E6FF00, #00FF00, #00ccff, #00ccff, #d400d4,#FF0000);
+    animation: rgb2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rgb1 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(100%);
+    }
+}
+
+@keyframes rgb2 {
+    0% {
+        transform: translate(-100%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.box-avatar {
+    background-color: #071d38;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+.avatar {
+    height: 200px;
+    width: 200px; 
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+.avatar img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info { 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+.info p {
+    color: #fff;
+}
+
+.info span {
+    color: #ff7b00;
+}
